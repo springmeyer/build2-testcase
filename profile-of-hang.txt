@@ -1,0 +1,156 @@
+Sampling process 83486 for 3 seconds with 1 millisecond of run time between samples
+Sampling completed, processing symbols...
+Analysis of sampling b (pid 83486) every 1 millisecond
+Process:         b [83486]
+Path:            /Users/dane/projects/mason/mason_packages/osx-x86_64/build2/0.6.2/bin/b
+Load Address:    0x1052a3000
+Identifier:      b
+Version:         0
+Code Type:       X86-64
+Parent Process:  bash [81025]
+
+Date/Time:       2017-12-06 13:35:58.335 -0800
+Launch Time:     2017-12-06 13:35:32.464 -0800
+OS Version:      Mac OS X 10.12.6 (16G29)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+----
+
+Call graph:
+    2864 Thread_9332262   DispatchQueue_1: com.apple.main-thread  (serial)
+    + 2864 start  (in libdyld.dylib) + 1  [0x7fffc26f4235]
+    +   2864 build2::main(int, char**)  (in b) + 32128  [0x1052ac410]
+    +     2864 build2::match(butl::small_vector<build2::value, 1ul> const&, build2::action, std::__1::vector<void const*, std::__1::allocator<void const*> >&)  (in b) + 1053  [0x1053c5c3d]
+    +       2864 build2::wait_guard::wait()  (in b) + 80  [0x1052b78d0]
+    +         2864 build2::scheduler::wait(unsigned long, std::__1::atomic<unsigned long> const&, build2::scheduler::work_queue)  (in b) + 418  [0x1053f3b42]
+    +           2864 build2::scheduler::execute(std::__1::unique_lock<std::__1::mutex>&, build2::scheduler::task_data&)  (in b) + 27  [0x1053f544b]
+    +             2864 void build2::scheduler::task_thunk<build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3, std::__1::reference_wrapper<build2::target>, unsigned long&, build2::diag_frame const*&>(build2::scheduler&, std::__1::unique_lock<std::__1::mutex>&, void*)  (in b) + 120  [0x1052beb88]
+    +               2864 build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3::operator()(build2::target&, unsigned long, build2::diag_frame const*) const  (in b) + 148  [0x1052be994]
+    +                 2864 build2::match_impl(build2::action, build2::target_lock&, bool)  (in b) + 211  [0x1052ba7b3]
+    +                   2864 build2::test::alias_rule::apply(build2::action, build2::target&) const  (in b) + 248  [0x105406118]
+    +                     2864 build2::apply_impl(build2::target&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::reference_wrapper<build2::rule const> > const&, build2::action)  (in b) + 85  [0x1052ba255]
+    +                       2864 build2::alias_rule::apply(build2::action, build2::target&) const  (in b) + 68  [0x1053f3004]
+    +                         2864 build2::match_prerequisites(build2::action, build2::target&, build2::scope const*)  (in b) + 830  [0x1052bb10e]
+    +                           2864 build2::wait_guard::wait()  (in b) + 80  [0x1052b78d0]
+    +                             2864 build2::scheduler::wait(unsigned long, std::__1::atomic<unsigned long> const&, build2::scheduler::work_queue)  (in b) + 418  [0x1053f3b42]
+    +                               2864 build2::scheduler::execute(std::__1::unique_lock<std::__1::mutex>&, build2::scheduler::task_data&)  (in b) + 27  [0x1053f544b]
+    +                                 2864 void build2::scheduler::task_thunk<build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3, std::__1::reference_wrapper<build2::target>, unsigned long&, build2::diag_frame const*&>(build2::scheduler&, std::__1::unique_lock<std::__1::mutex>&, void*)  (in b) + 120  [0x1052beb88]
+    +                                   2864 build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3::operator()(build2::target&, unsigned long, build2::diag_frame const*) const  (in b) + 148  [0x1052be994]
+    +                                     2864 build2::match_impl(build2::action, build2::target_lock&, bool)  (in b) + 211  [0x1052ba7b3]
+    +                                       2864 build2::test::alias_rule::apply(build2::action, build2::target&) const  (in b) + 248  [0x105406118]
+    +                                         2864 build2::apply_impl(build2::target&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::reference_wrapper<build2::rule const> > const&, build2::action)  (in b) + 85  [0x1052ba255]
+    +                                           2864 build2::alias_rule::apply(build2::action, build2::target&) const  (in b) + 68  [0x1053f3004]
+    +                                             2864 build2::match_prerequisites(build2::action, build2::target&, build2::scope const*)  (in b) + 830  [0x1052bb10e]
+    +                                               2864 build2::wait_guard::wait()  (in b) + 80  [0x1052b78d0]
+    +                                                 2864 build2::scheduler::wait(unsigned long, std::__1::atomic<unsigned long> const&, build2::scheduler::work_queue)  (in b) + 418  [0x1053f3b42]
+    +                                                   2864 build2::scheduler::execute(std::__1::unique_lock<std::__1::mutex>&, build2::scheduler::task_data&)  (in b) + 27  [0x1053f544b]
+    +                                                     2864 void build2::scheduler::task_thunk<build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3, std::__1::reference_wrapper<build2::target>, unsigned long&, build2::diag_frame const*&>(build2::scheduler&, std::__1::unique_lock<std::__1::mutex>&, void*)  (in b) + 120  [0x1052beb88]
+    +                                                       2864 build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3::operator()(build2::target&, unsigned long, build2::diag_frame const*) const  (in b) + 148  [0x1052be994]
+    +                                                         2864 build2::match_impl(build2::action, build2::target_lock&, bool)  (in b) + 211  [0x1052ba7b3]
+    +                                                           2864 build2::test::rule::apply(build2::action, build2::target&) const  (in b) + 3452  [0x105406f7c]
+    +                                                             2864 build2::apply_impl(build2::target&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::reference_wrapper<build2::rule const> > const&, build2::action)  (in b) + 85  [0x1052ba255]
+    +                                                               2864 build2::cc::link::apply(build2::action, build2::target&) const  (in b) + 16777  [0x105325899]
+    +                                                                 2864 build2::wait_guard::wait()  (in b) + 80  [0x1052b78d0]
+    +                                                                   2864 build2::scheduler::wait(unsigned long, std::__1::atomic<unsigned long> const&, build2::scheduler::work_queue)  (in b) + 418  [0x1053f3b42]
+    +                                                                     2864 build2::scheduler::execute(std::__1::unique_lock<std::__1::mutex>&, build2::scheduler::task_data&)  (in b) + 27  [0x1053f544b]
+    +                                                                       2864 void build2::scheduler::task_thunk<build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3, std::__1::reference_wrapper<build2::target>, unsigned long&, build2::diag_frame const*&>(build2::scheduler&, std::__1::unique_lock<std::__1::mutex>&, void*)  (in b) + 120  [0x1052beb88]
+    +                                                                         2864 build2::match(build2::action, build2::target const&, unsigned long, std::__1::atomic<unsigned long>*)::$_3::operator()(build2::target&, unsigned long, build2::diag_frame const*) const  (in b) + 148  [0x1052be994]
+    +                                                                           2864 build2::match_impl(build2::action, build2::target_lock&, bool)  (in b) + 211  [0x1052ba7b3]
+    +                                                                             2864 build2::cc::compile::apply(build2::action, build2::target&) const  (in b) + 7728  [0x1052ed150]
+    +                                                                               2851 build2::cc::compile::extract_headers(build2::action, build2::scope const&, build2::file&, build2::cc::linfo, build2::file const&, build2::cc::compile::match_data const&, build2::depdb&, bool&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000l> > >) const  (in b) + 4561  [0x1052f0181]
+    +                                                                               ! 2851 butl::getline(butl::ifdstream&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)  (in b) + 77  [0x10547535d]
+    +                                                                               !   2847 std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)  (in b) + 137  [0x10536d169]
+    +                                                                               !   : 2847 std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()  (in libc++.1.dylib) + 15  [0x7fffc128ebbb]
+    +                                                                               !   :   2847 butl::fdbuf::underflow()  (in b) + 62  [0x10547426e]
+    +                                                                               !   :     2847 read  (in libsystem_kernel.dylib) + 10  [0x7fffc2824246]
+    +                                                                               !   2 std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)  (in b) + 105,99  [0x10536d149,0x10536d143]
+    +                                                                               !   1 std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)  (in b) + 165  [0x10536d185]
+    +                                                                               !   : 1 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)  (in libc++.1.dylib) + 141  [0x7fffc12c2345]
+    +                                                                               !   1 std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)  (in b) + 222  [0x10536d1be]
+    +                                                                               !     1 std::__1::ios_base::clear(unsigned int)  (in libc++.1.dylib) + 24  [0x7fffc128cf96]
+    +                                                                               9 build2::cc::compile::extract_headers(build2::action, build2::scope const&, build2::file&, build2::cc::linfo, build2::file const&, build2::cc::compile::match_data const&, build2::depdb&, bool&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000l> > >) const  (in b) + 3153  [0x1052efc01]
+    +                                                                               ! 6 butl::process::process(butl::process_path const&, char const**, int, int, int, char const*, char const* const*)  (in b) + 279  [0x105481cc7]
+    +                                                                               ! : 3 0x0
+    +                                                                               ! : | 3 __fork  (in libsystem_kernel.dylib) + 11  [0x7fffc2822393]
+    +                                                                               ! : 3 fork  (in libsystem_c.dylib) + 57  [0x7fffc273a441]
+    +                                                                               ! :   2 libSystem_atfork_parent  (in libSystem.B.dylib) + 14  [0x7fffc114ba63]
+    +                                                                               ! :   + 2 _malloc_fork_parent  (in libsystem_malloc.dylib) + 69  [0x7fffc287d268]
+    +                                                                               ! :   +   2 szone_force_unlock  (in libsystem_malloc.dylib) + 169  [0x7fffc287d36a]
+    +                                                                               ! :   1 libSystem_atfork_parent  (in libSystem.B.dylib) + 19  [0x7fffc114ba68]
+    +                                                                               ! :     1 _objc_atfork_parent  (in libobjc.A.dylib) + 400  [0x7fffc1e176a9]
+    +                                                                               ! :       1 rwlock_tt<false>::unlockWrite()  (in libobjc.A.dylib) + 11  [0x7fffc1dfb913]
+    +                                                                               ! :         1 pthread_rwlock_unlock  (in libsystem_pthread.dylib) + 91  [0x7fffc290c014]
+    +                                                                               ! 2 butl::process::process(butl::process_path const&, char const**, int, int, int, char const*, char const* const*)  (in b) + 259  [0x105481cb3]
+    +                                                                               ! : 2 butl::fdnull()  (in b) + 28  [0x105475dec]
+    +                                                                               ! :   2 __open  (in libsystem_kernel.dylib) + 10  [0x7fffc2822a3e]
+    +                                                                               ! 1 butl::process::process(butl::process_path const&, char const**, int, int, int, char const*, char const* const*)  (in b) + 279  [0x105481cc7]
+    +                                                                               2 build2::cc::compile::extract_headers(build2::action, build2::scope const&, build2::file&, build2::cc::linfo, build2::file const&, build2::cc::compile::match_data const&, build2::depdb&, bool&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000l> > >) const  (in b) + 5868  [0x1052f069c]
+    +                                                                               ! 2 build2::cc::next_make(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long&)  (in b) + 146  [0x1052f80f2]
+    +                                                                               !   2 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)  (in libc++.1.dylib) + 160  [0x7fffc12c2018]
+    +                                                                               !     2 operator new(unsigned long)  (in libc++abi.dylib) + 30  [0x7fffc12fde0e]
+    +                                                                               !       2 malloc  (in libsystem_malloc.dylib) + 24  [0x7fffc2875200]
+    +                                                                               !         2 malloc_zone_malloc  (in libsystem_malloc.dylib) + 107  [0x7fffc2876282]
+    +                                                                               !           1 szone_malloc_should_clear  (in libsystem_malloc.dylib) + 400  [0x7fffc2876472]
+    +                                                                               !           : 1 tiny_malloc_from_free_list  (in libsystem_malloc.dylib) + 1043  [0x7fffc2877b83]
+    +                                                                               !           1 szone_malloc_should_clear  (in libsystem_malloc.dylib) + 245  [0x7fffc28763d7]
+    +                                                                               2 build2::cc::compile::extract_headers(build2::action, build2::scope const&, build2::file&, build2::cc::linfo, build2::file const&, build2::cc::compile::match_data const&, build2::depdb&, bool&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000l> > >) const  (in b) + 7631  [0x1052f0d7f]
+    +                                                                                 2 butl::ifdstream::close()  (in b) + 73  [0x1054752d9]
+    +                                                                                   2 close  (in libsystem_kernel.dylib) + 10  [0x7fffc28236be]
+    2864 Thread_9332292
+      2864 thread_start  (in libsystem_pthread.dylib) + 13  [0x7fffc290d08d]
+        2864 _pthread_start  (in libsystem_pthread.dylib) + 286  [0x7fffc290d887]
+          2864 _pthread_body  (in libsystem_pthread.dylib) + 180  [0x7fffc290d93b]
+            2864 void* std::__1::__thread_proxy<std::__1::tuple<void (*)(void*), build2::scheduler*> >(void*)  (in b) + 97  [0x1053f5581]
+              2864 build2::scheduler::helper(void*)  (in b) + 532  [0x1053f5284]
+                2864 std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 47  [0x7fffc128b4cd]
+                  2864 _pthread_cond_wait  (in libsystem_pthread.dylib) + 712  [0x7fffc290e7fa]
+                    2864 __psynch_cvwait  (in libsystem_kernel.dylib) + 10  [0x7fffc2822bf2]
+
+Total number in stack (recursive counted multiple, when >=5):
+
+Sort by top of stack, same collapsed (when >= 5):
+        __psynch_cvwait  (in libsystem_kernel.dylib)        2864
+        read  (in libsystem_kernel.dylib)        2847
+
+Binary Images:
+       0x1052a3000 -        0x1054dcff3 +b (0) <E79565F7-6181-3423-BDBA-1CEE467976F1> /Users/dane/projects/mason/mason_packages/.link/bin/b
+       0x10afa0000 -        0x10afdddc7  dyld (0.0 - ???) <322C06B7-8878-311D-888C-C8FD2CA96FF3> /usr/lib/dyld
+    0x7fffc114a000 -     0x7fffc114bffb  libSystem.B.dylib (1238.60.2) <F18AC1E7-C6F1-34B1-8069-BE571B3231D4> /usr/lib/libSystem.B.dylib
+    0x7fffc1284000 -     0x7fffc12daff7  libc++.1.dylib (307.5) <0B43BB5D-E6EB-3464-8DE9-B41AC8ED9D1C> /usr/lib/libc++.1.dylib
+    0x7fffc12db000 -     0x7fffc1304ff7  libc++abi.dylib (307.4) <BC271AD3-831B-362A-9DA7-E8C51F285FE4> /usr/lib/libc++abi.dylib
+    0x7fffc1df9000 -     0x7fffc21cb047  libobjc.A.dylib (709.1) <70614861-0340-32E2-85ED-FE65759CDFFA> /usr/lib/libobjc.A.dylib
+    0x7fffc2618000 -     0x7fffc261cff7  libcache.dylib (79) <093A4DAB-8385-3D47-A350-E20CB7CCF7BF> /usr/lib/system/libcache.dylib
+    0x7fffc261d000 -     0x7fffc2627fff  libcommonCrypto.dylib (60092.50.5) <8A64D1B0-C70E-385C-92F0-E669079FDA90> /usr/lib/system/libcommonCrypto.dylib
+    0x7fffc2628000 -     0x7fffc262ffff  libcompiler_rt.dylib (62) <55D47421-772A-32AB-B529-1A46C2F43B4D> /usr/lib/system/libcompiler_rt.dylib
+    0x7fffc2630000 -     0x7fffc2638fff  libcopyfile.dylib (138) <819BEA3C-DF11-3E3D-A1A1-5A51C5BF1961> /usr/lib/system/libcopyfile.dylib
+    0x7fffc2639000 -     0x7fffc26bcfdf  libcorecrypto.dylib (442.50.19) <65D7165E-2E71-335D-A2D6-33F78E2DF0C1> /usr/lib/system/libcorecrypto.dylib
+    0x7fffc26bd000 -     0x7fffc26eefff  libdispatch.dylib (703.50.37) <6582BAD6-ED27-3B30-B620-90B1C5A4AE3C> /usr/lib/system/libdispatch.dylib
+    0x7fffc26ef000 -     0x7fffc26f4ffb  libdyld.dylib (433.5) <9B2AC56D-107C-3541-A127-9094A751F2C9> /usr/lib/system/libdyld.dylib
+    0x7fffc26f5000 -     0x7fffc26f5ffb  libkeymgr.dylib (28) <7AA011A9-DC21-3488-BF73-3B5B14D1FDD6> /usr/lib/system/libkeymgr.dylib
+    0x7fffc2703000 -     0x7fffc2703fff  liblaunch.dylib (972.70.1) <B856ABD2-896E-3DE0-B2C8-146A6AF8E2A7> /usr/lib/system/liblaunch.dylib
+    0x7fffc2704000 -     0x7fffc2709ff3  libmacho.dylib (898) <17D5D855-F6C3-3B04-B680-E9BF02EF8AED> /usr/lib/system/libmacho.dylib
+    0x7fffc270a000 -     0x7fffc270cff3  libquarantine.dylib (85.50.1) <12448CC2-378E-35F3-BE33-9DC395A5B970> /usr/lib/system/libquarantine.dylib
+    0x7fffc270d000 -     0x7fffc270effb  libremovefile.dylib (45) <38D4CB9C-10CD-30D3-8B7B-A515EC75FE85> /usr/lib/system/libremovefile.dylib
+    0x7fffc270f000 -     0x7fffc2727ff7  libsystem_asl.dylib (349.50.5) <096E4228-3B7C-30A6-8B13-EC909A64499A> /usr/lib/system/libsystem_asl.dylib
+    0x7fffc2728000 -     0x7fffc2728ff7  libsystem_blocks.dylib (67) <10DC5404-73AB-35B3-A277-A8AFECB476EB> /usr/lib/system/libsystem_blocks.dylib
+    0x7fffc2729000 -     0x7fffc27b6fef  libsystem_c.dylib (1158.50.2) <E5AE5244-7D0C-36AC-8BB6-C7AE7EA52A4B> /usr/lib/system/libsystem_c.dylib
+    0x7fffc27b7000 -     0x7fffc27baffb  libsystem_configuration.dylib (888.60.2) <BECC01A2-CA8D-31E6-BCDF-D452965FA976> /usr/lib/system/libsystem_configuration.dylib
+    0x7fffc27bb000 -     0x7fffc27befff  libsystem_coreservices.dylib (41.4) <7D26DE79-B424-3450-85E1-F7FAB32714AB> /usr/lib/system/libsystem_coreservices.dylib
+    0x7fffc27bf000 -     0x7fffc27d7fff  libsystem_coretls.dylib (121.50.4) <EC6FCF07-DCFB-3A03-9CC9-6DD3709974C6> /usr/lib/system/libsystem_coretls.dylib
+    0x7fffc27d8000 -     0x7fffc27defff  libsystem_dnssd.dylib (765.50.9) <CC960215-0B1B-3822-A13A-3DDE96FA796F> /usr/lib/system/libsystem_dnssd.dylib
+    0x7fffc27df000 -     0x7fffc2808ff7  libsystem_info.dylib (503.50.4) <611DB84C-BF70-3F92-8702-B9F28A900920> /usr/lib/system/libsystem_info.dylib
+    0x7fffc2809000 -     0x7fffc282bff7  libsystem_kernel.dylib (3789.70.16) <34B1F16C-BC9C-3C5F-9045-0CAE91CB5914> /usr/lib/system/libsystem_kernel.dylib
+    0x7fffc282c000 -     0x7fffc2873fe7  libsystem_m.dylib (3121.6) <86D499B5-BBDC-3D3B-8A4E-97AE8E6672A4> /usr/lib/system/libsystem_m.dylib
+    0x7fffc2874000 -     0x7fffc2892ff7  libsystem_malloc.dylib (116.50.8) <A3D15F17-99A6-3367-8C7E-4280E8619C95> /usr/lib/system/libsystem_malloc.dylib
+    0x7fffc2893000 -     0x7fffc28ecffb  libsystem_network.dylib (856.60.1) <369D0221-56CA-3C3E-9EDE-94B41CAE77B7> /usr/lib/system/libsystem_network.dylib
+    0x7fffc28ed000 -     0x7fffc28f6ff3  libsystem_networkextension.dylib (563.60.2) <B021F2B3-8A75-3633-ABB0-FC012B8E9B0C> /usr/lib/system/libsystem_networkextension.dylib
+    0x7fffc28f7000 -     0x7fffc2900ff3  libsystem_notify.dylib (165.20.1) <B8160190-A069-3B3A-BDF6-2AA408221FAE> /usr/lib/system/libsystem_notify.dylib
+    0x7fffc2901000 -     0x7fffc2909fe7  libsystem_platform.dylib (126.50.8) <897462FD-B318-321B-A554-E61982630F7E> /usr/lib/system/libsystem_platform.dylib
+    0x7fffc290a000 -     0x7fffc2914ff7  libsystem_pthread.dylib (218.60.3) <B8FB5E20-3295-39E2-B5EB-B464D1D4B104> /usr/lib/system/libsystem_pthread.dylib
+    0x7fffc2915000 -     0x7fffc2918ff7  libsystem_sandbox.dylib (592.70.1) <4B92EC49-ACD0-36AE-B07A-A2B8152EAF9D> /usr/lib/system/libsystem_sandbox.dylib
+    0x7fffc2919000 -     0x7fffc291aff3  libsystem_secinit.dylib (24.50.4) <F78B847B-3565-3E4B-98A6-F7AD40392E2D> /usr/lib/system/libsystem_secinit.dylib
+    0x7fffc291b000 -     0x7fffc2922ffb  libsystem_symptoms.dylib (532.50.47) <3390E07C-C1CE-348F-ADBD-2C5440B45EAA> /usr/lib/system/libsystem_symptoms.dylib
+    0x7fffc2923000 -     0x7fffc2936ff7  libsystem_trace.dylib (518.70.1) <AC63A7FE-50D9-3A30-96E6-F6B7FF16E465> /usr/lib/system/libsystem_trace.dylib
+    0x7fffc2937000 -     0x7fffc293cffb  libunwind.dylib (35.3) <3D50D8A8-C460-334D-A519-2DA841102C6B> /usr/lib/system/libunwind.dylib
+    0x7fffc293d000 -     0x7fffc2966ff7  libxpc.dylib (972.70.1) <BF896DF0-D8E9-31A8-A4B3-01120BFEEE52> /usr/lib/system/libxpc.dylib
+Sample analysis of process 83486 written to file /dev/stdout

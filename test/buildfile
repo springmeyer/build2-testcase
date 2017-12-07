@@ -1,0 +1,3 @@
+
+exe{run-test}: {cxx}{*}
+exe{*}: test = true
